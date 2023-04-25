@@ -1,0 +1,73 @@
+* {
+}
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 5px 10px 18px gray;
+    background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+}
+
+.navbar .logo {
+    display: inline;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.navbar .logo #Home {
+    display: inline;
+    color: white;
+}
+.navbar .logo #Vista {
+    display: inline;
+    color: #0a71ad;
+}
+
+.navbar .list_nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navbar .list_nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 50px;
+    font-size: 18px;
+    color: #a1a1a1;
+    border: 0px solid #5c5c5c;
+    border-radius: 30px;
+}
+
+.navbar .list_nav a:hover {
+    color: white;
+    background-color: #5c5c5c;
+    transition-duration: 0.5s;
+}
+
+.login {
+    font-size: 20px;
+    width: 175px;
+    padding: 8px 8px 10px 8px;
+    margin: 0px 30px 0px 30px;
+    border: 0px solid #5c5c5c;
+    border-radius: 30px;
+    text-align: center;
+    background: #2c96d3;
+}
+
+.login:hover {
+    background: #216e9b;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login a {
+    text-decoration: none;
+    color: #ffffff;
+}
