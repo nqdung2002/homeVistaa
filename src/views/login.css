@@ -1,5 +1,5 @@
 @import url('https://fonts.google.com/specimen/Montserrat');
-body {
+body .body_login {
     background: radial-gradient(#4cb1eb,
     #003756);
     height: 100vh;
@@ -15,7 +15,6 @@ body {
     background-color: white;
     height: 400px;
     border-radius: 15px;
-    
 }
 
 .main h1 {
@@ -94,6 +93,7 @@ input[type="submit"]:hover {
 
 #forgot {
     padding-top: 20px;
+    text-align: center;
 }
 
 #forgot a {

@@ -10,12 +10,12 @@ export const Navbar = () => {
             <div id="Vista">Vista</div>
         </div>
         <div className="list_nav">
-            <Link to="/home">Trang chủ</Link>
-            <Link to="/">Hướng dẫn</Link>
-            <Link to="/about/">Về chúng tôi</Link>
+            <Link to="/home/">Trang chủ</Link>
+            <Link to="/">Tìm kiếm</Link>
+            <Link to="/about/">Hướng dẫn</Link>
             <Link to="/carts/">Liên hệ</Link>
         </div>
-        <div className="login"><Link to="/">Đăng nhập</Link></div>
+        <div className="login"><Link to="/login/">Đăng nhập</Link></div>
     </div>
   )
 }

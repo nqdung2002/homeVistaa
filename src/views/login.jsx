@@ -6,20 +6,25 @@ export const Login = () => {
     <div>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="../css/homepage.css" type="text/css" />
-        <title>Trang chủ</title>
-        <header>
-          <a href className="logo"><h1>HomeVista</h1></a>
-          <nav className="navbar">
-            <a href>Chức năng 1</a>
-            <a href>Chức năng 2</a>
-            <a href>Chức năng 3</a>
-            <a href>Chức năng 4</a>
-            <a href>Chức năng 5</a>
-          </nav>
-          <div className="icon">
-            <a href className="fas fa-heart" />
+        <body className='body_login'>
+          <div className="main">
+            <h1>Login</h1>
+            <form action="">
+              <div className="textfield">
+                <input type="textarea" required/>
+                <label htmlFor="">Tên đăng nhập</label>
+                <span></span>
+              </div>
+              <div className="textfield">
+                <input type="password" required/>
+                <label htmlFor="">Mật khẩu</label>
+                <span></span>
+              </div>
+              <input type="submit" />
+            </form>
+            <div id="forgot">Quên mật khẩu? Thiết lập lại <a href="">tại đây</a>.</div>
           </div>
-        </header>
+        </body>
       </div>
   )
 }
