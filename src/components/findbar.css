@@ -1,0 +1,51 @@
+.findbar {
+    background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+    top: 200px;
+    left: 40px;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    padding-bottom: 50px !important;
+    border-radius: 20px;
+}
+
+span.find_title {
+    margin-bottom: -10px;
+}
+
+label.form-label {
+    display: inline-block;
+    width: 125px;
+}
+
+.findbar span {
+    padding-bottom: 15px;
+}
+
+.search {
+    vertical-align: baseline;
+}
+
+.search input {
+    height: 20px
+}
+
+.search button {
+    vertical-align: middle;
+}
+
+.findbar #button {
+    padding: 10px 0px;
+}
+
+.nut {
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    width: 100px;
+    margin-top: 20px;
+    padding: 5px;
+}

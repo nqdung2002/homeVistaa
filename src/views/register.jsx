@@ -1,16 +1,20 @@
 import React from 'react'
-import './login.css'
-import { Link } from 'react-router-dom'
+import './register.css'
 
-export const Login = () => {
+export const Register = () => {
   return (
     <div>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="../css/homepage.css" type="text/css" />
-        <body className='body_login'>
-          <div className="main-login">
+        <body className='body_register'>
+          <div className="main-register">
             <h1>Login</h1>
             <form action="">
+              <div className="textfield">
+                <input type="textarea" required/>
+                <label htmlFor="">Tên đăng ký</label>
+                <span></span>
+              </div>
               <div className="textfield">
                 <input type="textarea" required/>
                 <label htmlFor="">Email</label>
@@ -23,7 +27,6 @@ export const Login = () => {
               </div>
               <input type="submit" />
             </form>
-            <div id="forgot">Quên mật khẩu? Thiết lập lại <Link to={"/register/"}>tại đây</Link>.</div>
           </div>
         </body>
       </div>

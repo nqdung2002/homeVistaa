@@ -6,9 +6,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-    box-shadow: 5px 10px 18px gray;
     background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
-
 }
 
 .navbar .logo {
@@ -36,7 +34,7 @@
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 50px;
-    font-size: 18px;
+    font-size: 16px;
     color: #a1a1a1;
     border: 0px solid #5c5c5c;
     border-radius: 30px;

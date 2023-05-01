@@ -11,7 +11,7 @@ export const Navbar = () => {
         </div>
         <div className="list_nav">
             <Link to="/home/">Trang chủ</Link>
-            <Link to="/">Tìm kiếm</Link>
+            <Link to="/find/">Tìm kiếm</Link>
             <Link to="/about/">Hướng dẫn</Link>
             <Link to="/carts/">Liên hệ</Link>
         </div>

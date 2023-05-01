@@ -1,29 +1,29 @@
 @import url('https://fonts.google.com/specimen/Montserrat');
-body .body_login {
+body .body_register {
     background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
 
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
-.main-login {
+.main-register {
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     width: 400px;
     background-color: white;
-    height: 400px;
+    height: 420px;
     border-radius: 15px;
 }
 
-.main-login h1 {
+.main-register h1 {
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 1px solid silver;
 }
 
-.main-login form {
+.main-register form {
     padding: 0 40px;
     box-sizing: border-box;
 }
