@@ -1,34 +1,85 @@
-import React from 'react'
-import './register.css'
+import React from "react";
+import { useState } from "react";
+import "./register.css";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(username, email, password);
+
+    fetch("http://localhost:5000/signup", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegister");
+        if (data.status === "oke") {
+          alert("Registration Successful");
+          window.location.href = "/home";
+        } else {
+          alert("Something went wrong");
+        }
+      });
+  };
+
   return (
     <div>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/homepage.css" type="text/css" />
-        <body className='body_register'>
-          <div className="main-register">
-            <h1>Login</h1>
-            <form action="">
-              <div className="textfield">
-                <input type="textarea" required/>
-                <label htmlFor="">Tên đăng ký</label>
-                <span></span>
-              </div>
-              <div className="textfield">
-                <input type="textarea" required/>
-                <label htmlFor="">Email</label>
-                <span></span>
-              </div>
-              <div className="textfield">
-                <input type="password" required/>
-                <label htmlFor="">Mật khẩu</label>
-                <span></span>
-              </div>
-              <input type="submit" />
-            </form>
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" href="../css/homepage.css" type="text/css" />
+      <div className="body_register">
+        <div className="main-register">
+          <h1>Register</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="textfield">
+              <input
+                type="name"
+                required
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <label htmlFor="">Tên đăng ký</label>
+              <span></span>
+            </div>
+            <div className="textfield">
+              <input
+                type="email"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label htmlFor="">Email</label>
+              <span></span>
+            </div>
+            <div className="textfield">
+              <input
+                type="password"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <label htmlFor="">Mật khẩu</label>
+              <span></span>
+            </div>
+            <input type="submit" />
+          </form>
+          <div id="forgot">
+            Đã có tài khoản? Đăng nhập <Link to={"/login"}>tại đây</Link>.
           </div>
-        </body>
+        </div>
       </div>
-  )
-}
+    </div>
+  );
+};
