@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./register.css";
 import { Link } from "react-router-dom";
+import img from "../assets/images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png";
+
 
 export const Register = () => {
   const [username, setUsername] = useState("");
@@ -79,6 +81,16 @@ export const Register = () => {
             Đã có tài khoản? Đăng nhập <Link to={"/login"}>tại đây</Link>.
           </div>
         </div>
+        <div className="foot_right">
+          <div className="block1">HomeVista</div>
+          <div className="block2">25 năm vận hành</div>
+          <div className="block3">
+            Là một dự án được vận hành liên tục trong 25 năm, chúng tôi tin có
+            thể đem lại cho bạn một trải nghiệm thăm nhà tuyệt vời nhất quả đất.
+          </div>
+        </div>
+
+        <img src={img} alt="" />
       </div>
     </div>
   );

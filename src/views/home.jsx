@@ -18,6 +18,7 @@ export const Home = (userData) => {
           <Link to="/find">Tìm kiếm</Link>
           <Link to="/about">Hướng dẫn</Link>
           <Link to="/carts">Liên hệ</Link>
+          <Link to="/carts">Yêu thích</Link>
         </div>
         {/* <div className="login"><Link to="/login">Đăng nhập</Link></div> */}
         <div>Chào mừng: {userData.username}</div>

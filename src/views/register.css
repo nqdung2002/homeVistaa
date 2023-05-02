@@ -9,8 +9,8 @@ body .body_register {
 .main-register {
     position: absolute;
     top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    left: 25%;
+    translate: -40% -50%;
     width: 380px;
     background-color: white;
     height: 480px;
@@ -98,4 +98,34 @@ input[type="submit"]:hover {
 
 #forgot a {
     text-decoration: none;
+}
+
+.body_register .foot_right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    width: 50%;
+    background: linear-gradient(97.73deg, #399FD8 -6.96%, #0775B4 23.5%, #003756 92.79%);
+    z-index: 1;
+    padding: 20px 0px;
+    color: white;
+}
+
+.body_register .foot_right .block1{
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.body_register .foot_right .block2{
+    padding-top: 20px;
+}
+
+.body_register img {
+    position: absolute;
+    bottom: 1vh;
+    right: 0;
+    height: 95vh;
 }

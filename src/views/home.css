@@ -35,7 +35,7 @@ body .body_home {
 
 .home_foot {
     padding-left: 150px;
-    margin-top: 0px;
+    margin-top: 22px;
     display: flex;
     justify-content: space-between;
 }
@@ -65,15 +65,15 @@ body .body_home {
 
 .home_foot .foot_right .block1{
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .home_foot .foot_right .block2{
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .home_foot .foot_right .block3{
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .home_foot img {

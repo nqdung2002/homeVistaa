@@ -2,6 +2,7 @@ import React from 'react'
 import './items.css'
 import { Link } from 'react-router-dom'
 import { Heart } from '@phosphor-icons/react'
+import { Item_page } from '../views/item_page'
 import img1 from '../assets/images/img1.jpg'
 import img2 from '../assets/images/img2.jpg'
 import img3 from '../assets/images/img3.jpg'
@@ -20,7 +21,7 @@ import img12 from '../assets/images/img12.jpg'
 export const Items = () => {
   return (
     <div className="row-grid">
-       <Link className="cover-image" >
+       <Link className="cover-image" to="./item_page">
             <img src={img1} alt="" />
             <span className='dark-overlay'></span>
             <button id='heart'><Heart /></button>
