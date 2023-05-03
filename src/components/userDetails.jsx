@@ -5,7 +5,6 @@ export default function UserDetails() {
   const [userData, setUserData] = useState("");
 
   useEffect(() => {
-    console.log(userData);
     fetch("http://localhost:5000/userData", {
       method: "POST",
       crossDomain: true,
@@ -29,7 +28,7 @@ export default function UserDetails() {
           window.location.href = "./login";
         }
       });
-  });
+  }, []);
 
   return <Home userData = {userData}/>;
 }

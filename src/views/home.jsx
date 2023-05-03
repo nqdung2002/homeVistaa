@@ -3,28 +3,12 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import { Plus } from "@phosphor-icons/react";
 import img from "../assets/images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png";
+import { Navbar } from "../components/navbar";
 
-export const Home = (userData) => {
-  console.log(userData.username);
+export const Home = () => {
   return (
     <div className="body_home">
-      <div className="navbar">
-        <div className="logo">
-          <div id="Home">Home</div>
-          <div id="Vista">Vista</div>
-        </div>
-        <div className="list_nav">
-          <Link to="/home">Trang chủ</Link>
-          <Link to="/find">Tìm kiếm</Link>
-          <Link to="/about">Hướng dẫn</Link>
-          <Link to="/carts">Liên hệ</Link>
-          <Link to="/carts">Yêu thích</Link>
-        </div>
-        {/* <div className="login"><Link to="/login">Đăng nhập</Link></div> */}
-        <div>Chào mừng: {userData.username}</div>
-      </div>
-
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="slogan">
         <h1>Tìm một căn nhà trong mơ</h1>
         <h1>trong khi vẫn nằm dài trên giường</h1>

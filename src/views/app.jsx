@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import './app.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Home } from '../views/home'

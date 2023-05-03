@@ -1,13 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../assets/images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png";
 
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -34,7 +35,7 @@ export const Login = () => {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
 
-          window.location.href = "./userDetails";
+          navigate('/home');
         }
       });
   }
