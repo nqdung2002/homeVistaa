@@ -8,8 +8,8 @@ export const Findbar = () => {
     <div className="findbar">
         <span className='find_title'><h1>Tìm kiếm</h1></span>
         <span className='search'>
-          <input type="textarea" />
-          <button><MagnifyingGlass size={16} /></button>
+          <input type="textarea" placeholder='Search'/>
+          <button><MagnifyingGlass size={27} /></button>
         </span>
         <span>
           <Form.Label>Giá: </Form.Label>

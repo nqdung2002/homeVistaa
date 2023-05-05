@@ -1,80 +1,96 @@
-import React from 'react'
-import './item_page.css'
-import { Navbar } from '../components/navbar'
-import img from '../assets/images/img1.jpg'
+import { React, useEffect, useState } from "react";
+import "./item_page.css";
+import { Navbar } from "../components/navbar";
+import { useParams } from "react-router-dom";
+//import img from '../assets/images/img1.jpg'
 
 export const Item_page = () => {
+  const [data, setData] = useState([]);
+  const { slug } = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:5000/house/${slug}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "houseData");
+        setData(data.data);
+      });
+  }, [slug]);
+  const img = data.slug && require(`../assets/images/${data.slug}.jpg`);
   return (
     <div className="item_page_container">
       <Navbar />
       <div className="item_content">
         <img src={img} alt="" />
-        <h1>Giới thiệu về Căn nhà 1</h1>
-        <p>Căn nhà 1 với diện tích 250m2 là dự án mới nhất mà Khang Điền đang triển khai. Vào tháng 9/2021 vừa qua, Khang Điền và nhà thầu An Phong đã tiến hành làm lễ khởi công dự án này trước sự góp mặt quan trọng của nhiều lãnh đạo TP Thủ Đức</p>
+        <h1>Giới thiệu về {data.name}</h1>
+        <p>{data.description}</p>
         <ul>
           <li>
             <b>Trạng thái</b>
-            <p>Đang mở bán</p>
+            <p>{data.status}</p>
           </li>
           <li>
             <b>Diện tích</b>
-            <p>250m2</p>
+            <p>{data.area}</p>
           </li>
           <li>
             <b>Vị trí</b>
-            <p>Quận Cầu Giấy</p>
+            <p>{data.address}</p>
           </li>
           <li>
             <b>Loại hình</b>
-            <p>Chung cư</p>
+            <p>{data.typeOfHouse}</p>
           </li>
           <li>
             <b>Phòng ngủ</b>
-            <p>3</p>
+            <p>{data.numberOfBedroom}</p>
           </li>
           <li>
             <b>Giá</b>
-            <p>2.000.000.000 VNĐ</p>
+            <p>{data.price}</p>
           </li>
         </ul>
       </div>
 
       <div className="sidebar">
-        <h2>Căn nhà 1</h2>
+        <h2>{data.name}</h2>
         <hr />
         <ul>
           <li>
             <b>Trạng thái</b>
-            <p>Đang mở bán</p>
+            <p>{data.status}</p>
           </li>
           <li>
             <b>Diện tích</b>
-            <p>250m2</p>
+            <p>{data.area}</p>
           </li>
           <li>
             <b>Vị trí</b>
-            <p>Quận Cầu Giấy</p>
+            <p>{data.address}</p>
           </li>
           <li>
             <b>Loại hình</b>
-            <p>Chung cư</p>
+            <p>{data.typeOfHouse}</p>
           </li>
           <li>
             <b>Phòng ngủ</b>
-            <p>3</p>
+            <p>{data.numberOfBedroom}</p>
           </li>
           <li>
             <b>Giá</b>
-            <p>2.000.000.000 VNĐ</p>
+            <p>{data.price}</p>
           </li>
         </ul>
         <hr />
-        <a href="" className='button1'>Xem nhà ngay</a>
-        <div className='button2'>
+        <a href="" className="button1">
+          Xem nhà ngay
+        </a>
+        <div className="button2">
           <a href="">Liên hệ</a>
           <a href="">Yêu thích</a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

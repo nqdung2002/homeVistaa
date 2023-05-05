@@ -1,7 +1,7 @@
 .findbar {
     background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
-    top: 200px;
-    left: 40px;
+    top: 130px;
+    left: 20px;
     position: fixed;
     justify-content: center;
     display: flex;
@@ -22,7 +22,7 @@ label.form-label {
 }
 
 .findbar span {
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .search {
@@ -30,16 +30,22 @@ label.form-label {
 }
 
 .search input {
-    height: 20px;
-    width: 230px;
+    height: 30px;
+    width: 290px;
+    margin-right: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 .search button {
     vertical-align: middle;
+    border-radius: 10px;
 }
 
 select.form-select {
-    width: 150px;;
+    width: 220px;
+    height: 32px;
+    border-radius: 10px;
 }
 
 .findbar #button {
@@ -50,7 +56,9 @@ select.form-select {
     position: relative;
     left: 50%;
     translate: -50%;
-    width: 100px;
+    width: 130px;
     margin-top: 20px;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
+
