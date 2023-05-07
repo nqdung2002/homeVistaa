@@ -20,7 +20,6 @@ export const Navbar = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userData");
         setUserData(data.data);
 
         if (data.data === "token expired") {

@@ -11,7 +11,6 @@ export const Items = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "houseData");
         setData(data.data);
       });
   }, []);

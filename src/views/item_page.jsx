@@ -1,8 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { React, useEffect, useState } from "react";
 import "./item_page.css";
 import { Navbar } from "../components/navbar";
 import { useParams } from "react-router-dom";
-//import img from '../assets/images/img1.jpg'
 
 export const Item_page = () => {
   const [data, setData] = useState([]);
@@ -13,7 +13,6 @@ export const Item_page = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "houseData");
         setData(data.data);
       });
   }, [slug]);
@@ -83,7 +82,7 @@ export const Item_page = () => {
           </li>
         </ul>
         <hr />
-        <a href="" className="button1">
+        <a href={`/find/${data.slug}/playpage`} className="button1">
           Xem nhà ngay
         </a>
         <div className="button2">
