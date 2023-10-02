@@ -4,7 +4,6 @@ import "./register.css";
 import { Link } from "react-router-dom";
 import img from "../assets/images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png";
 
-
 export const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -14,7 +13,7 @@ export const Register = () => {
     e.preventDefault();
     console.log(username, email, password);
 
-    fetch("http://localhost:5000/signup", {
+    fetch("http://localhost:5000/user/signup", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -32,8 +31,7 @@ export const Register = () => {
       .then((data) => {
         console.log(data, "userRegister");
         if (data.status === "oke") {
-          alert("Registration Successful");
-          window.location.href = "/home";
+          window.location.href = "/login";
         } else {
           alert("Something went wrong");
         }

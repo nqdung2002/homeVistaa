@@ -8,7 +8,7 @@ export const Item_page = () => {
   const [data, setData] = useState([]);
   const { slug } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/house/${slug}`, {
+    fetch(`http://localhost:5000/house/houseDetail/${slug}`, {
       method: "GET",
     })
       .then((res) => res.json())

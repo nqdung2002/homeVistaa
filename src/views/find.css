@@ -1,0 +1,62 @@
+.findbar {
+    background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+    top: 130px;
+    left: 20px;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    padding-bottom: 50px !important;
+    border-radius: 20px;
+}
+
+span.find_title {
+    margin-bottom: -10px;
+}
+
+.findbar span {
+    padding-bottom: 30px;
+}
+
+.search {
+    vertical-align: baseline;
+}
+
+.search input {
+    height: 30px;
+    width: 290px;
+    margin-right: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.search button {
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-btn {
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    width: 130px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.row-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    position: absolute;
+    top: 140px;
+    left: 450px;
+}

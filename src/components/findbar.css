@@ -16,11 +16,6 @@ span.find_title {
     margin-bottom: -10px;
 }
 
-label.form-label {
-    display: inline-block;
-    width: 125px;
-}
-
 .findbar span {
     padding-bottom: 30px;
 }
@@ -42,17 +37,16 @@ label.form-label {
     border-radius: 10px;
 }
 
-select.form-select {
-    width: 220px;
-    height: 32px;
-    border-radius: 10px;
+.filter {
+    display: flex;
+    justify-content: space-between;
 }
 
-.findbar #button {
+/* .findbar #button {
     padding: 10px 0px;
-}
+} */
 
-.nut {
+.clear-btn {
     position: relative;
     left: 50%;
     translate: -50%;
@@ -61,4 +55,3 @@ select.form-select {
     padding: 10px;
     border-radius: 10px;
 }
-

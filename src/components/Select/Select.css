@@ -1,0 +1,9 @@
+.select-label {
+    display: inline;
+    margin-top: 5px;
+}
+.select-main {
+    width: 220px;
+    height: 32px;
+    border-radius: 10px;
+}

@@ -1,20 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import "./login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import img from "../assets/images/joel-filipe-RFDP7_80v5A-unsplash (1) 1.png";
-
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/login", {
+    fetch("http://localhost:5000/user/signin", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -29,12 +27,11 @@ export const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userRegister");
         if (data.status === "ok") {
+          console.log(data, "userRegister");
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
-
-          navigate('/home');
+          window.location.href = "/home";
         }
       });
   }

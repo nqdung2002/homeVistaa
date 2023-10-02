@@ -6,18 +6,23 @@ export const Navbar = () => {
   const [userData, setUserData] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/userData", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        token: window.localStorage.getItem("token"),
-      }),
-    })
+    fetch(
+      `http://localhost:5000/user/userData/${window.localStorage.getItem(
+        "token"
+      )}`,
+      {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem("token"),
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setUserData(data.data);
@@ -29,7 +34,6 @@ export const Navbar = () => {
         }
       });
   }, []);
-  console.log(userData.username);
   return (
     <div className="navbar">
       <div className="logo">
